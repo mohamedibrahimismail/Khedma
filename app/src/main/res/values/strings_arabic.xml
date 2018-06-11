@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="textview_register">انشاء مستخدم جديد </string>
+    <string name="name">اسم المستخدم </string>
+    <string name="email">الايميل </string>
+    <string name="password">الرقم السري </string>
+    <string name="repassword">تاكيد الرقم السري </string>
+    <string name="regist_button">تسجيل </string>
+    <string name="signIn_text">تسجيل الدخول</string>
+    <string name="signIn_name">اسم المستخدم</string>
+    <string name="signIn_pass">كلمة المرور</string>
+    <string name="signIn_signb">تسجيل الدخول</string>
+    <string name="signIn_registb">انشاء حساب جديد</string>
+    <string name="successfulregistered">تم الاشتراك بنجاح</string>
+    <string name="chooseanotheremail">اختر ايميل اخر</string>
+    <string name="failedregistered">فشل التسجيل</string>
+    <string name="pleasefilltheinfo">من فضلك امل البيانات</string>
+    <string name="registfrafment_incorrectPasswprd">يجب كتابة كلمة المرور بشكل صحيح</string>
+</resources>

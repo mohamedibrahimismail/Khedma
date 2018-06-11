@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+    >
+        <TextView
+            android:textColor="@color/colorheader"
+            android:layout_alignBaseline="@+id/job_image"
+            android:layout_toLeftOf="@+id/job_image"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="job"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:id="@+id/job_item"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:layout_centerInParent="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="20dp"
+            android:padding="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/job_image"
+            android:src="@drawable/mechanic"
+
+            />
+</RelativeLayout>
+
+</android.support.v7.widget.CardView>

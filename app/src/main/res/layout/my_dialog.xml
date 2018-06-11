@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="هل تريد تسجيل الخروج؟"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/textview"
+        />
+    </RelativeLayout>
+   <RelativeLayout
+       android:layout_marginTop="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+
+       >
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="لا"
+           android:id="@+id/no"
+           />
+       <Button
+
+            android:layout_toEndOf="@+id/no"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="نعم"
+           android:id="@+id/yes"
+           />
+   </RelativeLayout>
+
+
+
+</LinearLayout>

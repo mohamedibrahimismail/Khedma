@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/colorheader"
+    android:padding="0dp"
+    >
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/cover_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_x="0dp"
+            android:layout_y="0dp"
+            android:scaleType="fitXY"
+            android:src="@color/colorheader" />
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/itemcolor"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_header"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_x="47dp"
+
+            android:layout_y="20dp"
+            android:src="@drawable/account_circle" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_x="52dp"
+            android:layout_y="113dp"
+            android:text="name"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+     </AbsoluteLayout>
+    </AbsoluteLayout>
+</LinearLayout>
