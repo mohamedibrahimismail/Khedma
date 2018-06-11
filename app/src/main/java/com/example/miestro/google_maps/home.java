@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -67,7 +69,7 @@ public class home extends AppCompatActivity  implements MyDialog.Communicator,Ch
           /*  Bitmap profile_bitmap = BitmapFactory.decodeByteArray(globalv.getProfile_img(), 0, globalv.getProfile_img().length);
             imageView_profile.setImageBitmap(profile_bitmap);
 */
-            Picasso.with(this).load(profile_url+globalv.getProfile_url()).into(imageView_profile);
+            Picasso.with(this).load(profile_url+globalv.getProfile_url()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imageView_profile);
 
         }
 
@@ -76,7 +78,7 @@ public class home extends AppCompatActivity  implements MyDialog.Communicator,Ch
            /* Bitmap cover_bitmap = BitmapFactory.decodeByteArray(globalv.getCover_img(), 0, globalv.getCover_img().length);
             imageView_cover.setImageBitmap(cover_bitmap);
           */
-            Picasso.with(home.this).load(cover_url+globalv.getCover_url()).into(imageView_cover);
+            Picasso.with(home.this).load(cover_url+globalv.getCover_url()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imageView_cover);
 
 
         }
@@ -203,17 +205,19 @@ public class home extends AppCompatActivity  implements MyDialog.Communicator,Ch
 
             //globalv.setProfile_img(img);
             globalv.setProfile_url(img_url);
+           // Toast.makeText(this,img_url,Toast.LENGTH_SHORT).show();
           //  imageView_profile.setImageBitmap(image);
+           // imageView_profile.setImageBitmap(null);
+            Picasso.with(this).load(profile_url+globalv.getProfile_url()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imageView_profile);
 
-            Picasso.with(this).load(profile_url+globalv.getProfile_url()).into(imageView_profile);
 
         }else if(type.equals("cover")){
 
             db_sqlite.updateData(globalv.getId(),"cover",img_url);
            // globalv.setCover_img(img);
             globalv.setCover_url(img_url);
-          //  imageView_cover.setImageBitmap(image);
-            Picasso.with(this).load(cover_url+globalv.getCover_url()).into(imageView_cover);
+            imageView_cover.setImageBitmap(null);
+            Picasso.with(this).load(cover_url+globalv.getCover_url()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imageView_cover);
             Toast.makeText(this,"تم الحفظ بنجاح",Toast.LENGTH_SHORT).show();
 
 

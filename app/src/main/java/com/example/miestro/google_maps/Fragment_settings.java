@@ -57,6 +57,7 @@ public class Fragment_settings extends Fragment{
     Globalv globalv;
     ProgressBar progressBar;
     DB_Sqlite db_sqlite;
+    boolean checked = true;
 
     public Fragment_settings() {
         // Required empty public constructor
@@ -115,6 +116,8 @@ public class Fragment_settings extends Fragment{
                 save_changes.setClickable(false);
                 save_changes.setText("الرجاء الانتظار...");
                 //progressBar.setVisibility(View.VISIBLE);
+
+
                 if(profile_bitmap==null){
                   Toast.makeText(getContext(),"من فضلك اختر صورة شخصية",Toast.LENGTH_SHORT).show();
 

@@ -76,8 +76,6 @@ public class Begining extends AppCompatActivity implements Splash_Communicator,R
             user user = listdata.get(0);
             globalv.setId(user.getId());
             globalv.setUser_name(user.getName());
-            globalv.setProfile_img(user.getProfile());
-            globalv.setCover_img(user.getCover());
             globalv.setProfile_url(user.getProfile_url());
             globalv.setCover_url(user.getCover_url());
 
@@ -123,7 +121,7 @@ public class Begining extends AppCompatActivity implements Splash_Communicator,R
                     db_sqlite.updateData(globalv.getId(),"profile",profile_img_url);
                     db_sqlite.updateData(globalv.getId(),"cover",cover_img_url);
                     globalv.setProfile_url(profile_img_url);
-                    Toast.makeText(this, globalv.getProfile_url(), Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(this, globalv.getProfile_url(), Toast.LENGTH_SHORT).show();
                     globalv.setCover_url(cover_img_url);
                     startActivity(new Intent(Begining.this, home.class));
                     Toast.makeText(this, "welcome " + globalv.getUser_name(), Toast.LENGTH_SHORT).show();

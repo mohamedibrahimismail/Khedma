@@ -7,14 +7,12 @@ package com.example.miestro.google_maps;
 public class user {
 
     String name,id;
-    byte[] profile,cover;
+
     String profile_url,cover_url;
 
-    public user(String id, String name, byte[] profile, byte[] cover,String profile_url,String  cover_url){
+    public user(String id, String name,String profile_url,String  cover_url){
         setId(id);
         setName(name);
-        setProfile(profile);
-        setCover(cover);
         setProfile_url(profile_url);
         setCover_url(cover_url);
 
@@ -51,22 +49,6 @@ public class user {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public byte[] getProfile() {
-        return profile;
-    }
-
-    public void setProfile(byte[] profile) {
-        this.profile = profile;
-    }
-
-    public byte[] getCover() {
-        return cover;
-    }
-
-    public void setCover(byte[] cover) {
-        this.cover = cover;
     }
 
 

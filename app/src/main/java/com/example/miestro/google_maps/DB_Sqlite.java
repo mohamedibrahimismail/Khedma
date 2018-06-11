@@ -24,7 +24,7 @@ public class DB_Sqlite extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("create table user (id TEXT,name TEXT,profile BLOB,cover BLOB,profile_url TEXT,cover_url TEXT)");
+        db.execSQL("create table user (id TEXT,name TEXT,profile_url TEXT,cover_url TEXT)");
 
     }
 
@@ -60,11 +60,9 @@ public class DB_Sqlite extends SQLiteOpenHelper {
         while(res.isAfterLast()==false){
             String id = res.getString(res.getColumnIndex("id"));
             String name = res.getString(res.getColumnIndex("name"));
-            byte[] profile =res.getBlob(res.getColumnIndex("profile"));
-            byte[] cover = res.getBlob(res.getColumnIndex("cover"));
             String profile_url = res.getString(res.getColumnIndex("profile_url"));
             String cover_url = res.getString(res.getColumnIndex("cover_url"));
-            user user = new user(id,name,profile,cover,profile_url,cover_url);
+            user user = new user(id,name,profile_url,cover_url);
             arrayList.add(user);
 
             res.moveToNext();
